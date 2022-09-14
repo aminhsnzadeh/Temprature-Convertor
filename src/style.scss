@@ -1,0 +1,114 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+.calculator {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffde24;
+    overflow: hidden;
+    > p {
+        width: 90%;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        bottom: 80px;
+        font-size: 1.3rem;
+        padding-left: 10%;
+        span {
+            margin: 0 0.5rem;
+        } 
+    }
+    > .temp {
+        width: 45%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        > h2 {
+            margin: 1.5rem 0;
+            margin-top: 4rem;
+            font-size: 1.6rem;
+        }
+        > input {
+            padding: 0.5rem 1rem;
+            width: 60px;
+            height: auto;
+            outline: none;
+        }
+        > span {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            font-family: cursive;
+        }
+    }
+}
+.glass {
+    position: absolute;
+    left: calc(50% - 20px);
+    top: 100px;
+    width: 40px;
+    height: 350px;
+    border-radius: 200px;
+    border: 3px solid #808080a4;
+    background-color: white;
+    animation: 0.4s infinite;
+    > .num {
+        width: auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column-reverse;
+        position: absolute;
+        bottom: -5px;
+    }
+    >.right {
+        right: -40px;
+    }
+    >.left {
+        left: -40px;
+    }
+    >.meter {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        bottom: 0;
+        border-radius: 15px;
+        transition: 0.4s;
+    }
+    
+    > .circle {
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 70px;
+        border: 3px solid #808080;
+        border-radius: 50%;
+        transition: 0.4s;
+        border-top: transparent;
+    }
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
